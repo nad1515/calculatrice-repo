@@ -1,35 +1,52 @@
 * {
     box-sizing: border-box;
-    margin:0;
+    margin:0 auto;
     padding: 0;
 }
-body {
-    display:flex;
-    justify-content: center;
+
+h1 {
+    margin-top: 20px;
+    color: aqua;
     text-align: center;
+
 }
 
 
 
 main {
-    margin: 80px;
-    padding-top: 90;
-    padding-bottom:  100px;
+    margin: 50px auto;
+    padding: 10px;
     border: 1px solid black;
     width: 40%; 
+    border-radius: 12px;
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
 }
+.calculatrice {
+    padding-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 .calc-ecran {
     width: 80%;
     margin: auto;
     margin-top:20px;
     padding: 20px;
     border: 2px solid;
-
+    text-align: end;
+    box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    font-size: x-large;
+    
+    
 
 }
+
 .chiffres-signes {
     margin-top: 30px;
-    display: grid;
+     display: grid; 
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(3, 100px);
@@ -40,5 +57,33 @@ main {
     padding: 25px;
     align-items: center;
     border-radius: 12px;
+    font-size: large;
+    font-weight: bold;
+    
+}
+button:active {
     box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.signes {
+    padding: 25px;
+    border: 1px solid rgba(red, green, blue, alpha);
+    border-radius: 12px;
+    font-size: larger;
+    font-weight: bold;
+     
+} 
+ .egale {
+    padding: 25px;
+    border: 1px solid rgba(red, green, blue, alpha);
+    border-radius: 12px;
+    font-size: larger;
+    font-weight: bold;
+     
+} 
+.vergule {
+    padding: 25px;
+    border: 1px solid rgba(red, green, blue, alpha);
+    border-radius: 12px;
+    font-size: large;
+    font-weight: bold;
 }
