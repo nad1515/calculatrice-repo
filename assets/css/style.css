@@ -5,7 +5,7 @@
 }
 
 h1 {
-    margin-top: 20px;
+    margin-top: 5px;
     color: aqua;
     text-align: center;
 
@@ -14,8 +14,8 @@ h1 {
 
 
 main {
-    margin: 50px auto;
-    padding: 10px;
+    margin: 45px auto;
+
     border: 1px solid black;
     width: 40%; 
     border-radius: 12px;
@@ -23,7 +23,7 @@ main {
 }
 .calculatrice {
     padding-bottom: 10px;
-    padding: 10px;
+    padding: 10px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +49,7 @@ main {
      display: grid; 
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(3, 100px);
+     grid-template-columns: repeat(3, 100px); 
     gap: 5px;
 }
 .chiffres {
@@ -72,7 +72,7 @@ button:active {
     font-weight: bold;
      
 } 
- .egale {
+.egale {
     padding: 25px;
     border: 1px solid rgba(red, green, blue, alpha);
     border-radius: 12px;
@@ -81,6 +81,13 @@ button:active {
      
 } 
 .vergule {
+    padding: 25px;
+    border: 1px solid rgba(red, green, blue, alpha);
+    border-radius: 12px;
+    font-size: large;
+    font-weight: bold;
+}
+#btnAC {
     padding: 25px;
     border: 1px solid rgba(red, green, blue, alpha);
     border-radius: 12px;

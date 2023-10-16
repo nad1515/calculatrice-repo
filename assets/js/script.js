@@ -2,6 +2,7 @@
 let  main = document.createElement("main");
 document.body.appendChild(main);
 let signes = ["+","-","*","/"];
+let saisie = [];
 
 //............calculatrice..................
 
@@ -39,7 +40,7 @@ clavier.classList.add("chiffres-signes")
   clavSignes.innerText = signes[index];
 
 }
-  //.........egle..........
+  //.........egale..........
   let equal = document.createElement("button");
   equal.classList.add("egale")
   clavier.appendChild(equal);
@@ -51,21 +52,48 @@ clavier.classList.add("chiffres-signes")
   clavier.appendChild(point);
   point.innerText = ".";
 
-  // Fonctionnement de la calculatrice
-  let mesBoutons = document.querySelectorAll("button");
-  for (let index = 0; index < mesBoutons.length; index++) {
-    mesBoutons[index].addEventListener("click", (eventClick) => {
-        console.log("Bouton cliqué : ", eventClick.target.innerText);
-        document.querySelector(".calc-ecran").innerText = eventClick.target.innerText;
-       
-    })
+ 
+  let bouttonAC = document.createElement("button");
+  clavier.appendChild(bouttonAC);
+  bouttonAC.setAttribute("id","btnAC")
+  bouttonAC.innerText = "AC"; 
+
+
+
+  //  Fonctionnement de la calculatrice...................................
+  let mesBoutons = document.querySelectorAll(".chiffres, .signes, .vergule");
+  console.log(mesBoutons);
+  mesBoutons.forEach((mesBoutons) => {
+    mesBoutons.addEventListener("click", (evenementClick) => {
+      // console.log(saisie.length)
+      if(saisie.length === 0)
+      document.querySelector(".calc-ecran").innerText = "";
+      document.querySelector(".calc-ecran").innerText += evenementClick.target.innerText;
+      saisie.push(evenementClick.target.innerText);
     
-}
+      
+    });
+  });
+   
+  //.............boutton AC........................................
+  let delet = document.querySelector("#btnAC");
+  delet.addEventListener('click', function () {
+      saisie = []; 
+     document.querySelector(".calc-ecran").innerText = "0";
+       calculer(saisie);
 
+  });
 
+///...................EVAL...............
+ let calcul = document.querySelector(".egale")
+     calcul.addEventListener('click', (fonctioncalcul) => {
+  document.querySelector(".calc-ecran").innerText= eval(document.querySelector(".calc-ecran").innerText);
+
+ });
+
+//  function calculer(operation) {
+    //eval()
  
- 
-
-
-
-
+ // Et si c'est un bouton qui a reçu le click et qu'on veut récupérer le texte du bouton 
+  // (innerText ou textContent) :
+  // console.log(eventClick.target.innerText);
