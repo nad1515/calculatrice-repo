@@ -55,7 +55,7 @@ clavier.classList.add("chiffres-signes")
  
   let bouttonAC = document.createElement("button");
   clavier.appendChild(bouttonAC);
-  bouttonAC.setAttribute("id","btnAC")
+  bouttonAC.setAttribute("id","btnAC");
   bouttonAC.innerText = "AC"; 
 
 
