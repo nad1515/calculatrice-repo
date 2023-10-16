@@ -80,8 +80,6 @@ clavier.classList.add("chiffres-signes")
   delet.addEventListener('click', function () {
       saisie = []; 
      document.querySelector(".calc-ecran").innerText = "0";
-       calculer(saisie);
-
   });
 
 ///...................EVAL...............
