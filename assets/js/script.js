@@ -63,8 +63,8 @@ clavier.classList.add("chiffres-signes")
   //  Fonctionnement de la calculatrice...................................
   let mesBoutons = document.querySelectorAll(".chiffres, .signes, .vergule");
   console.log(mesBoutons);
-  mesBoutons.forEach((mesBoutons) => {
-    mesBoutons.addEventListener("click", (evenementClick) => {
+  mesBoutons.forEach((unBouton) => {
+    unBouton.addEventListener("click", (evenementClick) => {
       // console.log(saisie.length)
       if(saisie.length === 0)
       document.querySelector(".calc-ecran").innerText = "";
